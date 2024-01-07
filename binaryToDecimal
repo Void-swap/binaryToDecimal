@@ -1,1 +1,23 @@
 
+public class numConversion {
+    public static void main(String arg[]) {
+        binToDec(110010);  //That is 55
+    }
+
+    // BINARY TO DECIMAL
+    public static void binToDec(int binary) {
+        int myNum = binary;
+        int pow = 0;
+        int decNum = 0;
+        // operation
+        while (binary > 0) {
+            int lastDigit = binary % 10; // finding last digit
+            decNum += (lastDigit * (int) Math.pow(2, pow));
+            pow++;
+            binary /= 10; // removal of last digit
+
+        }
+        System.out.println("DECIMAL of " + myNum + " is : " + decNum);
+
+    }
+}
